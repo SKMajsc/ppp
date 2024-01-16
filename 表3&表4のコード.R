@@ -25,7 +25,7 @@ diag(CovX) <- 1
 mu<-rep(0, p)
 survObj <- list()
 #KLはプログラムの試行回数
-KL<-1
+KL<-100
 #プログラムごとにパラメータを保存するための準備
 dat<-matrix(c(rep(0, p)),nrow=KL,ncol=p)
 meanbeta<-matrix(c(rep(0, p)),nrow=KL,ncol=p)
@@ -480,7 +480,7 @@ for(i in 1:KL){
   }
   
   #試行回数
-  num.reps =2000
+  num.reps =5000
   chain = 1
   thin = 1
   save = 5
